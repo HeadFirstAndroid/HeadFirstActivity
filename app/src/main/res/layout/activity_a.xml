@@ -28,6 +28,6 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:onClick="goSingleStandard"
+        android:onClick="goStandard"
         android:text="SingleStandard" />
 </LinearLayout>
