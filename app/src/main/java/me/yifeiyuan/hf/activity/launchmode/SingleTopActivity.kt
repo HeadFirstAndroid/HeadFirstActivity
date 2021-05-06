@@ -9,6 +9,11 @@ import me.yifeiyuan.hf.activity.R
 
 class SingleTopActivity : BaseActivity() {
 
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setTitle("SingleTopActivity")
+    }
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
         Log.d(TAG, "onNewIntent() called with: intent = $intent")

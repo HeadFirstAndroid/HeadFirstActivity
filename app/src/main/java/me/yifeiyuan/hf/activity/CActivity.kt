@@ -5,4 +5,8 @@ import android.os.Bundle
 
 class CActivity : BaseActivity() {
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setTitle("CActivity")
+    }
 }

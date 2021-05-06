@@ -11,8 +11,13 @@ import kotlin.math.log
 class SingleTaskActivity : BaseActivity() {
 
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setTitle("SingleTaskActivity")
+    }
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
         Log.d(TAG, "onNewIntent() called with: intent = $intent")
     }
+
 }

@@ -6,4 +6,10 @@ import me.yifeiyuan.hf.activity.BaseActivity
 import me.yifeiyuan.hf.activity.R
 
 class StandardActivity : BaseActivity() {
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setTitle("StandardActivity")
+    }
 }
