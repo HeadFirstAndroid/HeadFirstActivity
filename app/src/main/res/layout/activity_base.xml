@@ -8,74 +8,80 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
         android:layout_height="match_parent"
-        android:paddingHorizontal="16dp"
-        >
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp">
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:onClick="goA"            android:textAllCaps="false"
-
-            android:text="goA" />
+            android:onClick="goA"
+            android:text="goA"
+            android:textAllCaps="false" />
 
         <Button
-            android:layout_width="match_parent"            android:textAllCaps="false"
-
+            android:layout_width="match_parent"
             android:layout_height="48dp"
             android:onClick="goB"
-            android:text="goB" />
+            android:text="goB"
+            android:textAllCaps="false" />
 
         <Button
-            android:layout_width="match_parent"            android:textAllCaps="false"
-
+            android:layout_width="match_parent"
             android:layout_height="48dp"
             android:onClick="goC"
-            android:text="goC" />
+            android:text="goC"
+            android:textAllCaps="false" />
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="48dp"            android:textAllCaps="false"
-
+            android:layout_height="48dp"
             android:onClick="goSingleTop"
-            android:text="SingleTop" />
+            android:text="SingleTop"
+            android:textAllCaps="false" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:onClick="goSingleInstance"            android:textAllCaps="false"
-
-            android:text="SingleInstance" />
+            android:onClick="goSingleInstance"
+            android:text="SingleInstance"
+            android:textAllCaps="false" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:onClick="goSingleTask"            android:textAllCaps="false"
-
-            android:text="SingleTask" />
+            android:onClick="goSingleTask"
+            android:text="SingleTask"
+            android:textAllCaps="false" />
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="48dp"            android:textAllCaps="false"
+            android:layout_height="48dp"
             android:onClick="goStandard"
-            android:text="Standard" />
+            android:text="Standard"
+            android:textAllCaps="false" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:onClick="goStandardWithClearTop"
             android:text="goStandardWithClearTop"
-            android:textAllCaps="false"
-            />
+            android:textAllCaps="false" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:onClick="goStandardWithClearTask"
             android:text="goStandardWithClearTask"
-            android:textAllCaps="false"
-            />
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:onClick="goWebActivity"
+            android:text="goWebActivity"
+            android:textAllCaps="false" />
+
     </LinearLayout>
 
 </ScrollView>

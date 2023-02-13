@@ -8,6 +8,7 @@ import me.yifeiyuan.hf.activity.launchmode.SingleInstanceActivity
 import me.yifeiyuan.hf.activity.launchmode.SingleTaskActivity
 import me.yifeiyuan.hf.activity.launchmode.SingleTopActivity
 import me.yifeiyuan.hf.activity.launchmode.StandardActivity
+import me.yifeiyuan.hf.activity.web.WebActivity
 
 open class BaseActivity : AppCompatActivity() {
 
@@ -24,7 +25,6 @@ open class BaseActivity : AppCompatActivity() {
 
     fun goB(view: View) {
         startActivity(Intent(this, BActivity::class.java))
-
     }
 
     fun goC(view: View) {
@@ -61,5 +61,9 @@ open class BaseActivity : AppCompatActivity() {
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)// 单独使用 FLAG_ACTIVITY_CLEAR_TASK 是没有效果的
         startActivity(intent)
+    }
+
+    fun goWebActivity(view: View) {
+        startActivity<WebActivity>()
     }
 }
