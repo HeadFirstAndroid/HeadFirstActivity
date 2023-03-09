@@ -1,9 +1,9 @@
 package me.yifeiyuan.hf.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import me.yifeiyuan.hf.activity.launchmode.SingleInstanceActivity
 import me.yifeiyuan.hf.activity.launchmode.SingleTaskActivity
 import me.yifeiyuan.hf.activity.launchmode.SingleTopActivity
@@ -65,5 +65,12 @@ open class BaseActivity : AppCompatActivity() {
 
     fun goWebActivity(view: View) {
         startActivity<WebActivity>()
+    }
+
+    fun goActivityByIntentFilter(view: View) {
+        val intent = Intent()
+        intent.action = "android.user.MultiAccount"
+        intent.addCategory(Intent.CATEGORY_DEFAULT)
+        startActivity(intent)
     }
 }

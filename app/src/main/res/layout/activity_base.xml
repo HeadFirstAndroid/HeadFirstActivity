@@ -82,6 +82,13 @@
             android:text="goWebActivity"
             android:textAllCaps="false" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:onClick="goActivityByIntentFilter"
+            android:text="隐式启动"
+            android:textAllCaps="false" />
+
     </LinearLayout>
 
 </ScrollView>

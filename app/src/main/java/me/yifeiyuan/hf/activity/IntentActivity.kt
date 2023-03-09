@@ -1,12 +1,11 @@
 package me.yifeiyuan.hf.activity
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 
-class MainActivity : BaseActivity() {
-
+class IntentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d(TAG, "MainActivity onCreate() called with: savedInstanceState = $savedInstanceState")
+        setContentView(R.layout.activity_intent)
     }
 }
