@@ -14,22 +14,41 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HeadFirstActivity"
         android:usesCleartextTraffic="true">
-        <activity android:name=".IntentActivity">
+        <activity
+            android:name=".SActivity"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="http" android:host="a.taobao.com" android:path="/go/b" />
+                <data android:scheme="http" android:host="m.taobao.com" android:path="/go/networkDiagnosis" />
                 <data android:scheme="taobao" />
                 <data android:scheme="https" />
             </intent-filter>
 
+        </activity>
+        <activity android:name=".IntentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="a.taobao.com"
+                    android:path="/go/b"
+                    android:scheme="http" />
+                <data android:scheme="taobao" />
+                <data android:scheme="https" />
+            </intent-filter>
             <intent-filter>
                 <action android:name="a.b.c" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
-                <action android:name="android.user.MultiAccount"/>
+                <action android:name="android.user.MultiAccount" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

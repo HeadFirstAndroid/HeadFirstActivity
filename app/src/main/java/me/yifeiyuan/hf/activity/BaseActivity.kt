@@ -1,6 +1,7 @@
 package me.yifeiyuan.hf.activity
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -68,9 +69,16 @@ open class BaseActivity : AppCompatActivity() {
     }
 
     fun goActivityByIntentFilter(view: View) {
-        val intent = Intent()
-        intent.action = "android.user.MultiAccount"
+//        val intent = Intent()
+//        intent.action = "android.user.MultiAccount"
+//        intent.addCategory(Intent.CATEGORY_DEFAULT)
+//        startActivity(intent)
+
+        val intent = Intent(
+            "android.intent.action.VIEW",
+            Uri.parse("http://m.taobao.com/go/networkDiagnosis"))
         intent.addCategory(Intent.CATEGORY_DEFAULT)
+        intent.setPackage(packageName)
         startActivity(intent)
     }
 }

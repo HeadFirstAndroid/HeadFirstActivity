@@ -89,6 +89,10 @@
             android:text="隐式启动"
             android:textAllCaps="false" />
 
+        <me.yifeiyuan.hf.activity.TView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="100dp"
+            android:layout_height="10dp"/>
     </LinearLayout>
 
 </ScrollView>
