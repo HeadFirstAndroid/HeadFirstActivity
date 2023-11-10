@@ -1,8 +1,11 @@
 package me.yifeiyuan.hf.activity
 
 import android.os.Bundle
+import android.os.Handler
 import android.text.TextUtils
 import android.util.Log
+import java.util.concurrent.atomic.AtomicBoolean
+import kotlin.math.log
 
 class MainActivity : BaseActivity() {
 
@@ -13,8 +16,30 @@ class MainActivity : BaseActivity() {
 
     override fun onResume() {
         super.onResume()
-        val result = checkPhoneNumber("187****0713", "18758260713")
-        Log.d(TAG, "onResume: "+result)
+//        val result = checkPhoneNumber("187****0713", "18758260713")
+//        Log.d(TAG, "onResume: "+result)
+        checkLock()
+    }
+
+    private fun checkLock() {
+
+        Handler().postDelayed(object : Runnable {
+            override fun run() {
+//                lock.set(false)
+            }
+        }, 1000)
+
+        repeat(100){
+            Thread {
+                tryLock()
+            }.start()
+        }
+    }
+
+    private fun tryLock() {
+        if (lock.compareAndSet(false, true)) {
+            Log.e(TAG, "checkLock: enter  222,"+Thread.currentThread().name)
+        }
     }
 
     private fun checkPhoneNumber(maskPhone: String, mobilePhone: String): Boolean {
@@ -30,4 +55,7 @@ class MainActivity : BaseActivity() {
         }
         return false
     }
+
+    val lock = AtomicBoolean(false)
+
 }
